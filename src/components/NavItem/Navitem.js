@@ -4,7 +4,7 @@ import './Navitem.css';
 function Navitem(props) {
   return (
     <div
-      className="nav-item"
+      className="nav-item hover-underline-animation"
       onClick={(e) => {
         console.log(e.target);
       }}
