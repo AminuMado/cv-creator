@@ -4,9 +4,13 @@ import './Navitem.css';
 function Navitem(props) {
   return (
     <div
-      className="nav-item hover-underline-animation"
+      className={
+        props.active === props.id
+          ? 'nav-item active'
+          : 'nav-item hover-underline-animation'
+      }
       onClick={(e) => {
-        console.log(e.target);
+        props.setActive(props.id);
       }}
     >
       {props.name}
