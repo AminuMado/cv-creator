@@ -10,6 +10,9 @@ function Input(props) {
         type={props.type}
         placeholder={props.placeholder}
         value={props.value}
+        onChange={(event) =>
+          props.handleInputOnChange(event, props.category, props.id)
+        }
       />
     </div>
   );

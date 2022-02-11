@@ -25,7 +25,7 @@ function App() {
     },
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
-  function handleInputChange(event, category, id) {
+  function handleInputOnChange(event, category, id) {
     //you wanna have a means to be able to link the input field with the appropriate object in state automatically
     const value = event.currentTarget.value;
 
@@ -64,7 +64,7 @@ function App() {
         <form className="resume-form">
           <Input
             placeholder="Input your name here"
-            onChange={handleInputChange}
+            handleInputOnChange={handleInputOnChange}
             id="firstName"
             category="personalInfo"
             label="FirstName"
