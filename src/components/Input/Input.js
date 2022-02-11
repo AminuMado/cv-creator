@@ -3,7 +3,7 @@ import './Input.css';
 
 function Input(props) {
   return (
-    <div>
+    <div className="form-input">
       <label for={props.id}>{props.label}</label>
       <input
         id={props.id}
