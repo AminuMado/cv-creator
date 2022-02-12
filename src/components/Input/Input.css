@@ -19,6 +19,7 @@
   background: transparent;
   outline: none;
   border-radius: 0;
+  caret-color: white;
 }
 .form-input > input:focus {
   border-bottom: 2px solid rgb(133, 102, 102);
