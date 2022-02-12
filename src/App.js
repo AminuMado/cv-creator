@@ -89,6 +89,10 @@ function App() {
       </aside>
       <main>
         <form className="resume-form">
+          {/* <PersonalInfo
+            formData={formData}
+            handleChange={handleChangePersonalInfo}
+          /> */}
           <Education formData={formData} handleChange={handleChangeEducation} />
         </form>
         <div className="preview-wrapper"></div>
