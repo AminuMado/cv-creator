@@ -6,13 +6,12 @@ function Input(props) {
     <div className="form-input">
       <label for={props.name}>{props.label}</label>
       <input
+        id={props.id}
         name={props.name}
         type={props.type}
         placeholder={props.placeholder}
         value={props.value}
-        onChange={(event) =>
-          props.handleChange(event, props.category, props.name)
-        }
+        onChange={(event) => props.handleChange(event, props.id)}
       />
     </div>
   );
