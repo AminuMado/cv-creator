@@ -22,27 +22,32 @@ function App() {
       email: '',
       description: '',
     },
-    education: {
-      schoolName: '',
-      schoolLocation: '',
-      degree: '',
-      major: '',
-      gpa: '',
-      startDate: '',
-      endDate: '',
-    },
+    education: [
+      {
+        id: nanoid(),
+        schoolName: '',
+        schoolLocation: '',
+        degree: '',
+        major: '',
+        gpa: '',
+        startDate: '',
+        endDate: '',
+      },
+    ],
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
-  function handleInputOnChange(event, category, id) {
+
+  function handleChangePersonalInfo(event) {
     //you wanna have a means to be able to link the input field with the appropriate object in state automatically
     const value = event.currentTarget.value;
+    const name = event.currentTarget.name;
 
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [category]: {
-          ...prevFormData[category],
-          [id]: value,
+        personalInfo: {
+          ...prevFormData.personalInfo,
+          [name]: value,
         },
       };
     });
@@ -50,6 +55,19 @@ function App() {
   }
   function setActive(id) {
     setActiveNavItem(id);
+  }
+  function handleChangeEducation(event, id) {
+    const value = event.currentTarget.value;
+    const name = event.currentTarget.name;
+    setFormData((prevFormData) => {
+      const newEducation = prevFormData.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevFormData, education: [...newEducation] };
+    });
   }
 
   const navList = navItems.map((item) => (
@@ -70,9 +88,9 @@ function App() {
       </aside>
       <main>
         <form className="resume-form">
-          <Education
+          <PersonalInfo
             formData={formData}
-            handleInputOnChange={handleInputOnChange}
+            handleChange={handleChangePersonalInfo}
           />
         </form>
         <div className="preview-wrapper"></div>
