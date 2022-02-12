@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div className="flex-wrapper">
-      <header>My Cv Creator</header>
+      <header className="header">My Cv Creator</header>
       <aside>
         <nav>{navList}</nav>
       </aside>
