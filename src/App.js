@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Navitem from './components/NavItem/Navitem';
-import Input from './components/Input/Input';
+import PersonalInfo from './components/CvForm/PersonalInfo';
 import { nanoid } from 'nanoid';
 
 function App() {
@@ -14,14 +14,12 @@ function App() {
   ]);
   const [formData, setFormData] = React.useState({
     personalInfo: {
-      firstName: '',
-      lastName: 'Doe',
-      title: 'Senior Web Developer',
-      address: 'Example Street 10',
-      phoneNumber: '123456789',
-      email: 'john.doe@gmail.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus imperdiet nisl sed vestibulum. Donec gravida, nulla eget blandit fermentum, mauris nisi rutrum libero, ac pharetra erat est sit amet tellus. Quisque fermentum dolor a interdum fermentum. Maecenas vehicula ac ipsum nec gravida. Integer quis porta turpis. Aenean et metus.',
+      fullName: '',
+      title: '',
+      address: '',
+      phoneNumber: '',
+      email: '',
+      description: '',
     },
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
@@ -62,13 +60,9 @@ function App() {
       </aside>
       <main>
         <form className="resume-form">
-          <Input
-            placeholder="Input your name here"
+          <PersonalInfo
+            formData={formData}
             handleInputOnChange={handleInputOnChange}
-            id="firstName"
-            category="personalInfo"
-            label="FirstName"
-            value={formData.personalInfo.firstName}
           />
         </form>
         <div className="preview-wrapper"></div>
