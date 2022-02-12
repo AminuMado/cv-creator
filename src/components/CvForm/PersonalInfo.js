@@ -1,11 +1,11 @@
 import React from 'react';
 import Input from '../Input/Input';
+import './CvForm.css';
 
 function PersonalInfo(props) {
-  console.log(props);
   const { handleInputOnChange, formData } = props;
   return (
-    <section>
+    <section className="form-section">
       <Input
         placeholder="James Bond"
         handleInputOnChange={handleInputOnChange}
