@@ -4,14 +4,14 @@ import './Input.css';
 function Input(props) {
   return (
     <div className="form-input">
-      <label for={props.id}>{props.label}</label>
+      <label for={props.name}>{props.label}</label>
       <input
-        id={props.id}
+        name={props.name}
         type={props.type}
         placeholder={props.placeholder}
         value={props.value}
         onChange={(event) =>
-          props.handleInputOnChange(event, props.category, props.id)
+          props.handleInputOnChange(event, props.category, props.name)
         }
       />
     </div>
