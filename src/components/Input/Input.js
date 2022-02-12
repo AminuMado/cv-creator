@@ -11,7 +11,7 @@ function Input(props) {
         placeholder={props.placeholder}
         value={props.value}
         onChange={(event) =>
-          props.handleInputOnChange(event, props.category, props.name)
+          props.handleChange(event, props.category, props.name)
         }
       />
     </div>
