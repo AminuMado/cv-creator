@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Navitem from './components/NavItem/Navitem';
 import PersonalInfo from './components/CvForm/PersonalInfo';
+import Education from './components/CvForm/Education';
 import { nanoid } from 'nanoid';
 
 function App() {
@@ -20,6 +21,15 @@ function App() {
       phoneNumber: '',
       email: '',
       description: '',
+    },
+    education: {
+      schoolName: '',
+      schoolLocation: '',
+      degree: '',
+      major: '',
+      gpa: '',
+      startDate: '',
+      endDate: '',
     },
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
@@ -60,7 +70,7 @@ function App() {
       </aside>
       <main>
         <form className="resume-form">
-          <PersonalInfo
+          <Education
             formData={formData}
             handleInputOnChange={handleInputOnChange}
           />
