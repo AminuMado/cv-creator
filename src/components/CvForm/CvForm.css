@@ -1,0 +1,10 @@
+.form-section {
+  display: flex;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 85%;
+  max-width: 100%;
+  gap: 20px;
+  flex-direction: column;
+}
