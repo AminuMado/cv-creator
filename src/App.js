@@ -172,7 +172,15 @@ function App() {
       };
     });
   }
-
+  function handleDeleteExperience(event) {
+    if (formData.experience.length < 2) {
+      return;
+    }
+    setFormData((prevFormData) => {
+      const newExperience = prevFormData.experience.slice(0, -1);
+      return { ...prevFormData, experience: [...newExperience] };
+    });
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -195,6 +203,7 @@ function App() {
             formData={formData}
             handleChange={handleChangeExperience}
             handleAdd={handleAddExperience}
+            handleDelete={handleDeleteExperience}
           />
         </form>
         <div className="preview-wrapper"></div>
