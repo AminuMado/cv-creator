@@ -12,7 +12,6 @@ function App() {
     { name: 'Profile', id: nanoid() },
     { name: 'Education', id: nanoid() },
     { name: 'Experience', id: nanoid() },
-    { name: 'Skills', id: nanoid() },
   ]);
   const [formData, setFormData] = React.useState({
     personalInfo: {
@@ -181,7 +180,7 @@ function App() {
       return { ...prevFormData, experience: [...newExperience] };
     });
   }
-
+  console.log(activeNavItem);
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
