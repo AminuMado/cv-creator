@@ -77,12 +77,9 @@ function App() {
     // Instead you would spread the array items and add your new item at the end
     // also I'm going to limit it to 3 schools
     if (formData.education.length > 3) {
-      console.log('limit');
-      event.target.style.cursor = 'not-allowed';
       return;
-    } else {
-      event.target.style.cursor = 'pointer';
     }
+
     const newEducationData = {
       id: nanoid(),
       schoolName: '',
@@ -101,7 +98,17 @@ function App() {
     });
   }
   function handleDeleteEducation(event) {
-    console.log(event.target);
+    //This function basically removes the last object in the formdata.education array
+    // Important thing to note is you cant use array.pop as that would mutate state directly
+    // Instead you would spread the array items and remove the last item at the end
+    // also you cant remove the last one i.e if array.length = 1 do not delete
+    if (formData.education.length < 2) {
+      return;
+    }
+    setFormData((prevFormData) => {
+      const newEducation = prevFormData.education.slice(0, -1);
+      return { ...prevFormData, education: [...newEducation] };
+    });
   }
   const navList = navItems.map((item) => (
     <Navitem
