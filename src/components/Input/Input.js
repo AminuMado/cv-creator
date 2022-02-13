@@ -4,7 +4,7 @@ import './Input.css';
 function Input(props) {
   return (
     <div className="form-input">
-      <label for={props.name}>{props.label}</label>
+      <label htmlFor={props.name}>{props.label}</label>
       <input
         id={props.id}
         name={props.name}
