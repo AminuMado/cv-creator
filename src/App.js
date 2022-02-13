@@ -5,6 +5,7 @@ import Navitem from './components/NavItem/Navitem';
 import PersonalInfo from './components/CvForm/PersonalInfo';
 import Education from './components/CvForm/Education';
 import { nanoid } from 'nanoid';
+import Experience from './components/CvForm/Experience';
 
 function App() {
   const [navItems, setNavItems] = React.useState([
@@ -30,6 +31,17 @@ function App() {
         degree: '',
         major: '',
         gpa: '',
+        startDate: '',
+        endDate: '',
+      },
+    ],
+    experience: [
+      {
+        id: nanoid(),
+        companyName: '',
+        jobTitle: '',
+        jobLocation: '',
+        jobResponsibilites: [],
         startDate: '',
         endDate: '',
       },
@@ -132,12 +144,13 @@ function App() {
             formData={formData}
             handleChange={handleChangePersonalInfo}
           /> */}
-          <Education
+          {/* <Education
             formData={formData}
             handleChange={handleChangeEducation}
             handleAdd={handleAddEducation}
             handleDelete={handleDeleteEducation}
-          />
+          /> */}
+          <Experience formData={formData} />
         </form>
         <div className="preview-wrapper"></div>
       </main>
