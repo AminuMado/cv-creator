@@ -48,7 +48,17 @@ function App() {
     ],
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
-  const [valid, setValid] = React.useState(false);
+  const navList = navItems.map((item) => (
+    <Navitem
+      key={item.id}
+      name={item.name}
+      id={item.id}
+      active={activeNavItem}
+      setActive={setActive}
+    />
+  ));
+
+  // Personal Info handlers
 
   function handleChangePersonalInfo(event) {
     //you wanna have a means to be able to link the input field with the appropriate object in state automatically
@@ -69,6 +79,9 @@ function App() {
   function setActive(id) {
     setActiveNavItem(id);
   }
+
+  // Education Section
+
   function handleChangeEducation(event, id) {
     const value = event.currentTarget.value;
     const name = event.currentTarget.name;
@@ -122,15 +135,22 @@ function App() {
       return { ...prevFormData, education: [...newEducation] };
     });
   }
-  const navList = navItems.map((item) => (
-    <Navitem
-      key={item.id}
-      name={item.name}
-      id={item.id}
-      active={activeNavItem}
-      setActive={setActive}
-    />
-  ));
+
+  // Experience Setion
+  function handleChangeExperience(event, id) {
+    const value = event.currentTarget.value;
+    const name = event.currentTarget.name;
+    setFormData((prevFormData) => {
+      const newExperience = prevFormData.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value };
+        }
+        return experienceItem;
+      });
+      return { ...prevFormData, experience: [...newExperience] };
+    });
+    console.log(formData.experience);
+  }
 
   return (
     <div className="flex-wrapper">
@@ -150,7 +170,10 @@ function App() {
             handleAdd={handleAddEducation}
             handleDelete={handleDeleteEducation}
           /> */}
-          <Experience formData={formData} />
+          <Experience
+            formData={formData}
+            handleChange={handleChangeExperience}
+          />
         </form>
         <div className="preview-wrapper"></div>
       </main>
