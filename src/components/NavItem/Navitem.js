@@ -5,12 +5,12 @@ function Navitem(props) {
   return (
     <div
       className={
-        props.active === props.id
+        props.active === props.name
           ? 'nav-item active'
           : 'nav-item hover-underline-animation'
       }
       onClick={(e) => {
-        props.setActive(props.id);
+        props.setActive(props.name);
       }}
     >
       {props.name}
