@@ -1,0 +1,19 @@
+.add,
+.delete {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid;
+  border-color: #56c9aa;
+  border-radius: 2px;
+  background: transparent;
+  color: #56c9aa;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
