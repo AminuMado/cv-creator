@@ -36,6 +36,7 @@ function App() {
     ],
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
+  const [valid, setValid] = React.useState(false);
 
   function handleChangePersonalInfo(event) {
     //you wanna have a means to be able to link the input field with the appropriate object in state automatically
@@ -71,9 +72,37 @@ function App() {
     console.log(formData.education);
   }
   function handleAddEducation(event) {
+    //This function basically adds a new empty object in the formdata.education array
+    // Important thing to note is you cant use array.push as that would mutate state directly
+    // Instead you would spread the array items and add your new item at the end
+    // also I'm going to limit it to 3 schools
+    if (formData.education.length > 3) {
+      console.log('limit');
+      event.target.style.cursor = 'not-allowed';
+      return;
+    } else {
+      event.target.style.cursor = 'pointer';
+    }
+    const newEducationData = {
+      id: nanoid(),
+      schoolName: '',
+      schoolLocation: '',
+      degree: '',
+      major: '',
+      gpa: '',
+      startDate: '',
+      endDate: '',
+    };
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        education: [...prevFormData.education, newEducationData],
+      };
+    });
+  }
+  function handleDeleteEducation(event) {
     console.log(event.target);
   }
-
   const navList = navItems.map((item) => (
     <Navitem
       key={item.id}
