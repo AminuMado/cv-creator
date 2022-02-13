@@ -41,7 +41,7 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilites: [],
+        jobResponsibilites: '',
         startDate: '',
         endDate: '',
       },
@@ -181,6 +181,7 @@ function App() {
       return { ...prevFormData, experience: [...newExperience] };
     });
   }
+
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
