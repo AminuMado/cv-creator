@@ -1,4 +1,5 @@
-.form-section {
+.form-section,
+.buttons-container {
   display: flex;
   border: none;
   margin: 0 auto;
