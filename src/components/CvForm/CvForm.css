@@ -1,5 +1,4 @@
-.form-section,
-.buttons-container {
+.form-section {
   display: flex;
   border: none;
   margin: 0 auto;
@@ -11,4 +10,17 @@
   border-top: 5px solid;
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 65%;
+  max-width: 80%;
+  gap: 20px;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
