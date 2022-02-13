@@ -3,7 +3,8 @@ import ExperienceItem from './ExperienceItem';
 import Button from '../Button/Button';
 
 function Experience(props) {
-  const { formData, handleChange, handleAdd, handleDelete } = props;
+  const { formData, handleChange, handleAdd, handleDelete, handleAddJob } =
+    props;
   const ExperienceItems = formData.experience.map((item) => {
     return (
       <ExperienceItem
@@ -11,6 +12,7 @@ function Experience(props) {
         id={item.id}
         item={item}
         handleChange={handleChange}
+        handleAddJob={handleAddJob}
       />
     );
   });

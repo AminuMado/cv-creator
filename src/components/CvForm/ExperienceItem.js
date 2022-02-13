@@ -4,6 +4,7 @@ import Input from '../Input/Input';
 
 function ExperienceItem(props) {
   const { item, handleChange, id } = props;
+
   return (
     <section className="form-section">
       <Input
@@ -54,22 +55,6 @@ function ExperienceItem(props) {
         value={item.jobResponsibilites}
         handleChange={handleChange}
       />
-      <div className="task-buttons-container">
-        <Button
-          name="+"
-          handleClick={(e) => {
-            console.log(e.target);
-          }}
-          classification="Add"
-        />
-        <Button
-          name="-"
-          handleClick={(e) => {
-            console.log(e.target);
-          }}
-          classification="Delete"
-        />
-      </div>
     </section>
   );
 }
