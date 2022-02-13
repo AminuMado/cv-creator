@@ -70,6 +70,9 @@ function App() {
     });
     console.log(formData.education);
   }
+  function handleAddEducation(event) {
+    console.log(event.target);
+  }
 
   const navList = navItems.map((item) => (
     <Navitem
@@ -93,7 +96,12 @@ function App() {
             formData={formData}
             handleChange={handleChangePersonalInfo}
           /> */}
-          <Education formData={formData} handleChange={handleChangeEducation} />
+          <Education
+            formData={formData}
+            handleChange={handleChangeEducation}
+            handleAdd={handleAddEducation}
+            handleDelete={handleDeleteEducation}
+          />
         </form>
         <div className="preview-wrapper"></div>
       </main>
