@@ -151,6 +151,27 @@ function App() {
     });
     console.log(formData.experience);
   }
+  function handleAddExperience(event) {
+    if (formData.experience.length > 3) {
+      return;
+    }
+
+    const newExperienceData = {
+      id: nanoid(),
+      companyName: '',
+      jobTitle: '',
+      jobLocation: '',
+      jobResponsibilites: [],
+      startDate: '',
+      endDate: '',
+    };
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        experience: [...prevFormData.experience, newExperienceData],
+      };
+    });
+  }
 
   return (
     <div className="flex-wrapper">
@@ -173,6 +194,7 @@ function App() {
           <Experience
             formData={formData}
             handleChange={handleChangeExperience}
+            handleAdd={handleAddExperience}
           />
         </form>
         <div className="preview-wrapper"></div>
