@@ -24,3 +24,16 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.task-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.task-buttons-container > button {
+  width: 30px;
+  height: 30px;
+  color: white;
+  margin: 0px;
+  border-radius: 50%;
+}
