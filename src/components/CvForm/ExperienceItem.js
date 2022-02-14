@@ -4,7 +4,13 @@ import Input from '../Input/Input';
 import Task from '../Task/Task';
 
 function ExperienceItem(props) {
-  const { item, handleChange, id, handleAddJobResponsibilities } = props;
+  const {
+    item,
+    handleChange,
+    id,
+    handleAddJobResponsibilities,
+    handleDeleteJobResponsibilities,
+  } = props;
   const tasks = item.jobResponsibilities.map((task, index) => {
     return (
       <Task
@@ -64,6 +70,11 @@ function ExperienceItem(props) {
             id={id}
             handleClick={handleAddJobResponsibilities}
             classification="Add"
+          />
+          <Button
+            name=""
+            id={id}
+            handleClick={handleDeleteJobResponsibilities}
           />
         </div>
       </div>
