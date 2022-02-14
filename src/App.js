@@ -260,6 +260,7 @@ function App() {
             handleDelete={handleDeleteExperience}
             handleAddJobResponsibilities={handleAddJobResponsibilities}
             handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
+            handleChangeJobResponsibilities={handleChangeJobResponsibilities}
           />
         </form>
         <div className="preview-wrapper"></div>

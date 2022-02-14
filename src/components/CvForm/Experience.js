@@ -11,6 +11,7 @@ function Experience(props) {
     handleAddJob,
     handleAddJobResponsibilities,
     handleDeleteJobResponsibilities,
+    handleChangeJobResponsibilities,
   } = props;
   const ExperienceItems = formData.experience.map((item) => {
     return (
@@ -22,6 +23,7 @@ function Experience(props) {
         handleAddJob={handleAddJob}
         handleAddJobResponsibilities={handleAddJobResponsibilities}
         handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
+        handleChangeJobResponsibilities={handleChangeJobResponsibilities}
       />
     );
   });
