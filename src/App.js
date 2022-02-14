@@ -40,7 +40,7 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilities: ['dfd'],
+        jobResponsibilities: ['one', 'two'],
         startDate: '',
         endDate: '',
       },
@@ -160,7 +160,7 @@ function App() {
       companyName: '',
       jobTitle: '',
       jobLocation: '',
-      jobResponsibilites: [],
+      jobResponsibilities: [''],
       startDate: '',
       endDate: '',
     };
@@ -233,6 +233,7 @@ function App() {
           return experienceItem;
         }
       );
+      return { ...prevFormData, experience: [...newExperienceData] };
     });
   }
   return (
