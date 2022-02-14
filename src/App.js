@@ -221,6 +221,20 @@ function App() {
     });
     console.log(formData);
   }
+  function handleChangeJobResponsibilities(event, id, index) {
+    setFormData((prevFormData) => {
+      const newExperienceData = prevFormData.experience.map(
+        (experienceItem) => {
+          if (experienceItem.id === id) {
+            const newArray = [...experienceItem.jobResponsibilities];
+            newArray[index] = event.target.value;
+            return { ...experienceItem, jobResponsibilities: newArray };
+          }
+          return experienceItem;
+        }
+      );
+    });
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
