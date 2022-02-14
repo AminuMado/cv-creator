@@ -240,13 +240,24 @@ function App() {
     });
   }
   // Skills Section
-
+  function handleChangeSkills(event, id) {
+    setFormData((prevFormData) => {
+      const newArray = [...prevFormData.skills];
+      newArray[id] = event.target.value;
+      return { ...prevFormData, skills: [...newArray] };
+    });
+  }
   function handleAddSkills(event) {
     setFormData((prevFormData) => {
       return { prevFormData, skills: [...prevFormData.skills, ''] };
     });
   }
-
+  function handleDeleteSkills(event) {
+    setFormData((prevFormData) => {
+      const newArray = prevFormData.skills.slice(0, -1);
+      return { ...prevFormData, skills: [...newArray] };
+    });
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -274,7 +285,12 @@ function App() {
             handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
             handleChangeJobResponsibilities={handleChangeJobResponsibilities}
           /> */}
-          <Skills formData={formData} handleAddSkills={handleAddSkills} />
+          <Skills
+            formData={formData}
+            handleAddSkills={handleAddSkills}
+            handleDeleteSkills={handleDeleteSkills}
+            handleChangeSkills={handleChangeSkills}
+          />
         </form>
         <div className="preview-wrapper"></div>
       </main>
