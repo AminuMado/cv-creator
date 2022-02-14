@@ -1,10 +1,18 @@
 import React from 'react';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
+import Task from '../Task/Task';
 
 function ExperienceItem(props) {
   const { item, handleChange, id, handleAddJobResponsibilities } = props;
-
+  const tasks = item.jobResponsibilities.map((task, index) => {
+    return (
+      <Task
+        placeholder="Did awesome stuff at company"
+        value={item.jobResponsibilities[index]}
+      />
+    );
+  });
   return (
     <section className="form-section">
       <Input
@@ -47,15 +55,9 @@ function ExperienceItem(props) {
         value={item.endDate}
         handleChange={handleChange}
       />
-      <>
-        <Input
-          name="jobResponsibilites"
-          id={id}
-          label="Job Responsibilites"
-          placeholder="Did awesome stuff company"
-          value={item.jobResponsibilites}
-          handleChange={handleChange}
-        />
+      <div className="form-input">
+        <label>Job Responsibilities</label>
+        {tasks}
         <div className="task-buttons-container">
           <Button
             name="+"
@@ -64,7 +66,7 @@ function ExperienceItem(props) {
             classification="Add"
           />
         </div>
-      </>
+      </div>
     </section>
   );
 }
