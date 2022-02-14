@@ -40,7 +40,7 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilites: '',
+        jobResponsibilites: [''],
         startDate: '',
         endDate: '',
       },
@@ -180,7 +180,7 @@ function App() {
       return { ...prevFormData, experience: [...newExperience] };
     });
   }
-  console.log(activeNavItem);
+
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
