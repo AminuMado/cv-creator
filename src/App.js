@@ -47,7 +47,7 @@ function App() {
         endDate: '',
       },
     ],
-    skills: [''],
+    skills: ['First', 'second'],
   });
   const [activeNavItem, setActiveNavItem] = React.useState('');
   const navList = navItems.map((item) => (
