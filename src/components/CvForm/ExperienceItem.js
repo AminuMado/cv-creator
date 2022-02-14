@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 
 function ExperienceItem(props) {
-  const { item, handleChange, id } = props;
+  const { item, handleChange, id, handleAddJobResponsibilities } = props;
 
   return (
     <section className="form-section">
@@ -47,14 +47,24 @@ function ExperienceItem(props) {
         value={item.endDate}
         handleChange={handleChange}
       />
-      <Input
-        name="jobResponsibilites"
-        id={id}
-        label="Job Responsibilites"
-        placeholder="Did awesome stuff company"
-        value={item.jobResponsibilites}
-        handleChange={handleChange}
-      />
+      <>
+        <Input
+          name="jobResponsibilites"
+          id={id}
+          label="Job Responsibilites"
+          placeholder="Did awesome stuff company"
+          value={item.jobResponsibilites}
+          handleChange={handleChange}
+        />
+        <div className="task-buttons-container">
+          <Button
+            name="+"
+            id={id}
+            handleClick={handleAddJobResponsibilities}
+            classification="Add"
+          />
+        </div>
+      </>
     </section>
   );
 }
