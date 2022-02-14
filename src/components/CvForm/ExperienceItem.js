@@ -15,9 +15,10 @@ function ExperienceItem(props) {
   const tasks = item.jobResponsibilities.map((task, index) => {
     return (
       <Task
+        key={index}
         id={id}
         placeholder="Did awesome stuff at company"
-        value={item.jobResponsibilities[index]}
+        value={task}
         handleChange={handleChangeJobResponsibilities}
         index={index}
       />
