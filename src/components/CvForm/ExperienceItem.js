@@ -72,7 +72,7 @@ function ExperienceItem(props) {
             classification="Add"
           />
           <Button
-            name=""
+            name="-"
             id={id}
             handleClick={handleDeleteJobResponsibilities}
           />
