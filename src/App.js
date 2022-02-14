@@ -40,7 +40,7 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilities: [''],
+        jobResponsibilities: ['dfd'],
         startDate: '',
         endDate: '',
       },
