@@ -4,8 +4,9 @@ import Footer from './components/Footer/Footer';
 import Navitem from './components/NavItem/Navitem';
 import PersonalInfo from './components/CvForm/PersonalInfo';
 import Education from './components/CvForm/Education';
-import { nanoid } from 'nanoid';
 import Experience from './components/CvForm/Experience';
+import Skills from './components/CvForm/Skills';
+import { nanoid } from 'nanoid';
 
 function App() {
   const [navItems, setNavItems] = React.useState([
@@ -238,6 +239,14 @@ function App() {
       return { ...prevFormData, experience: [...newExperienceData] };
     });
   }
+  // Skills Section
+
+  function handleAddSkills(event) {
+    setFormData((prevFormData) => {
+      return { prevFormData, skills: [...prevFormData.skills, ''] };
+    });
+  }
+
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -256,7 +265,7 @@ function App() {
             handleAdd={handleAddEducation}
             handleDelete={handleDeleteEducation}
           /> */}
-          <Experience
+          {/* <Experience
             formData={formData}
             handleChange={handleChangeExperience}
             handleAdd={handleAddExperience}
@@ -264,7 +273,8 @@ function App() {
             handleAddJobResponsibilities={handleAddJobResponsibilities}
             handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
             handleChangeJobResponsibilities={handleChangeJobResponsibilities}
-          />
+          /> */}
+          <Skills formData={formData} handleAddSkills={handleAddSkills} />
         </form>
         <div className="preview-wrapper"></div>
       </main>
