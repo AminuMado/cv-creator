@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Task({ placeholder, id, value }) {
+function Task({ placeholder, id, value, index, handleChange }) {
   return (
     <input
       placeholder={placeholder}
-      onChange={(event) => props.handleChange(event, id, index)}
+      onChange={(event) => handleChange(event, id, index)}
       value={value}
     />
   );
