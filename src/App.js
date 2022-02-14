@@ -182,6 +182,8 @@ function App() {
   }
   // Task Section
   function handleAddJobResponsibilities(event, id) {
+    //This function below checks the experience array selects the one correct one based on id
+    // Then goes ahead and access the jobresponsiblity array and adds a new one
     setFormData((prevFormData) => {
       const newExperienceData = prevFormData.experience.map(
         (experienceItem) => {
@@ -194,6 +196,23 @@ function App() {
               ...experienceItem,
               jobResponsibilities: newJobResponsibilities,
             };
+          }
+          return experienceItem;
+        }
+      );
+      return { ...prevFormData, experience: [...newExperienceData] };
+    });
+    console.log(formData);
+  }
+  function handleDeleteJobResponsibilities(event, id) {
+    //This also checks the array id first then creates a new array with the last element sliced off
+    // Which is then added back to the object and set as new state
+    setFormData((prevFormData) => {
+      const newExperienceData = prevFormData.experience.map(
+        (experienceItem) => {
+          if (experienceItem.id === id) {
+            const newArray = experienceItem.jobResponsibilities.slice(0, -1);
+            return { ...experienceItem, jobResponsibilities: newArray };
           }
           return experienceItem;
         }
@@ -226,6 +245,7 @@ function App() {
             handleAdd={handleAddExperience}
             handleDelete={handleDeleteExperience}
             handleAddJobResponsibilities={handleAddJobResponsibilities}
+            handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
           />
         </form>
         <div className="preview-wrapper"></div>
