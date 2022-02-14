@@ -180,7 +180,24 @@ function App() {
       return { ...prevFormData, experience: [...newExperience] };
     });
   }
-
+  // Task Section
+  function handleAddJobResponsibilities(event, id) {
+    setFormData((prevFormData) => {
+      const newExperienceData = prevFormData.experience.map(
+        (experienceItem) => {
+          if (experienceItem.id === id) {
+            const newJobResponsibilities = [
+              ...experienceItem.jobResponsibilites,
+              '',
+            ];
+            return { ...experienceItem, newJobResponsibilities };
+          }
+          return experienceItem;
+        }
+      );
+      return { ...prevFormData, experience: [...newExperienceData] };
+    });
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
