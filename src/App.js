@@ -40,7 +40,7 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilites: [''],
+        jobResponsibilities: [''],
         startDate: '',
         endDate: '',
       },
@@ -187,16 +187,20 @@ function App() {
         (experienceItem) => {
           if (experienceItem.id === id) {
             const newJobResponsibilities = [
-              ...experienceItem.jobResponsibilites,
+              ...experienceItem.jobResponsibilities,
               '',
             ];
-            return { ...experienceItem, newJobResponsibilities };
+            return {
+              ...experienceItem,
+              jobResponsibilities: newJobResponsibilities,
+            };
           }
           return experienceItem;
         }
       );
       return { ...prevFormData, experience: [...newExperienceData] };
     });
+    console.log(formData);
   }
   return (
     <div className="flex-wrapper">
