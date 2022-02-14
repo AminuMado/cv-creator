@@ -1,5 +1,6 @@
 import React from 'react';
 import Task from '../Task/Task';
+import Button from '../Button/Button';
 function Skills({
   formData,
   handleAddSkills,
@@ -12,7 +13,7 @@ function Skills({
       placeholder="React"
       value={skill}
       handleChange={handleChangeSkills}
-      index={index}
+      id={index}
     />
   ));
 
@@ -22,13 +23,8 @@ function Skills({
         <label>Skills</label>
         {skills}
         <div className="task-buttons-container">
-          <Button
-            name="+"
-            id={id}
-            handleClick={handleAddSkills}
-            classification="Add"
-          />
-          <Button name="-" id={id} handleClick={handleDeleteSkills} />
+          <Button name="+" handleClick={handleAddSkills} classification="Add" />
+          <Button name="-" handleClick={handleDeleteSkills} />
         </div>
       </div>
     </section>
