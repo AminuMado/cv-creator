@@ -10,12 +10,16 @@ function ExperienceItem(props) {
     id,
     handleAddJobResponsibilities,
     handleDeleteJobResponsibilities,
+    handleChangeJobResponsibilities,
   } = props;
   const tasks = item.jobResponsibilities.map((task, index) => {
     return (
       <Task
+        id={id}
         placeholder="Did awesome stuff at company"
         value={item.jobResponsibilities[index]}
+        handleChange={handleChangeJobResponsibilities}
+        index={index}
       />
     );
   });
