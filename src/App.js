@@ -6,6 +6,7 @@ import PersonalInfo from './components/CvForm/PersonalInfo';
 import Education from './components/CvForm/Education';
 import Experience from './components/CvForm/Experience';
 import Skills from './components/CvForm/Skills';
+import CvHeader from './components/CvPreview/Header';
 import { nanoid } from 'nanoid';
 
 function App() {
@@ -305,7 +306,9 @@ function App() {
       </aside>
       <main>
         <form className="resume-form">{display}</form>
-        <div className="preview-wrapper"></div>
+        <div className="preview-wrapper">
+          <CvHeader personalInfo={formData.personalInfo} />
+        </div>
       </main>
       <Footer />
     </div>
