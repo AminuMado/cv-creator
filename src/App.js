@@ -6,7 +6,8 @@ import PersonalInfo from './components/CvForm/PersonalInfo';
 import Education from './components/CvForm/Education';
 import Experience from './components/CvForm/Experience';
 import Skills from './components/CvForm/Skills';
-import CvHeader from './components/CvPreview/Header';
+import CvPreview from './components/CvPreview/CvPreview';
+
 import { nanoid } from 'nanoid';
 
 function App() {
@@ -297,7 +298,7 @@ function App() {
         handleChangeSkills={handleChangeSkills}
       />
     );
-  } else display = 'Nothing to Show';
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -307,7 +308,7 @@ function App() {
       <main>
         <form className="resume-form">{display}</form>
         <div className="preview-wrapper">
-          <CvHeader personalInfo={formData.personalInfo} />
+          <CvPreview formData={formData} />
         </div>
       </main>
       <Footer />
