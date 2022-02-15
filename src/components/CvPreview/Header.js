@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CvHeader = ({ personalInfo }) => {
+function CvHeader({ personalInfo }) {
   const { fullName, title } = personalInfo;
 
   return (
@@ -9,6 +9,6 @@ const CvHeader = ({ personalInfo }) => {
       <p>{title}</p>
     </div>
   );
-};
+}
 
 export default CvHeader;
