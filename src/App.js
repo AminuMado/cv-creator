@@ -42,14 +42,14 @@ function App() {
         companyName: '',
         jobTitle: '',
         jobLocation: '',
-        jobResponsibilities: ['one', 'two'],
+        jobResponsibilities: [''],
         startDate: '',
         endDate: '',
       },
     ],
-    skills: ['First', 'second'],
+    skills: [''],
   });
-  const [activeNavItem, setActiveNavItem] = React.useState('');
+  const [activeNavItem, setActiveNavItem] = React.useState('Profile');
   const navList = navItems.map((item) => (
     <Navitem
       key={item.id}
@@ -247,17 +247,56 @@ function App() {
       return { ...prevFormData, skills: [...newArray] };
     });
   }
-  function handleAddSkills(event) {
+  function handleAddSkills() {
     setFormData((prevFormData) => {
       return { prevFormData, skills: [...prevFormData.skills, ''] };
     });
   }
-  function handleDeleteSkills(event) {
+  function handleDeleteSkills() {
     setFormData((prevFormData) => {
       const newArray = prevFormData.skills.slice(0, -1);
       return { ...prevFormData, skills: [...newArray] };
     });
   }
+  let display;
+  if (activeNavItem === 'Profile') {
+    display = (
+      <PersonalInfo
+        formData={formData}
+        handleChange={handleChangePersonalInfo}
+      />
+    );
+  } else if (activeNavItem === 'Education') {
+    display = (
+      <Education
+        formData={formData}
+        handleChange={handleChangeEducation}
+        handleAdd={handleAddEducation}
+        handleDelete={handleDeleteEducation}
+      />
+    );
+  } else if (activeNavItem === 'Experience') {
+    display = (
+      <Experience
+        formData={formData}
+        handleChange={handleChangeExperience}
+        handleAdd={handleAddExperience}
+        handleDelete={handleDeleteExperience}
+        handleAddJobResponsibilities={handleAddJobResponsibilities}
+        handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
+        handleChangeJobResponsibilities={handleChangeJobResponsibilities}
+      />
+    );
+  } else if (activeNavItem === 'Skills') {
+    display = (
+      <Skills
+        formData={formData}
+        handleAddSkills={handleAddSkills}
+        handleDeleteSkills={handleDeleteSkills}
+        handleChangeSkills={handleChangeSkills}
+      />
+    );
+  } else display = 'Nothing to Show';
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -265,33 +304,7 @@ function App() {
         <nav>{navList}</nav>
       </aside>
       <main>
-        <form className="resume-form">
-          {/* <PersonalInfo
-            formData={formData}
-            handleChange={handleChangePersonalInfo}
-          /> */}
-          {/* <Education
-            formData={formData}
-            handleChange={handleChangeEducation}
-            handleAdd={handleAddEducation}
-            handleDelete={handleDeleteEducation}
-          /> */}
-          {/* <Experience
-            formData={formData}
-            handleChange={handleChangeExperience}
-            handleAdd={handleAddExperience}
-            handleDelete={handleDeleteExperience}
-            handleAddJobResponsibilities={handleAddJobResponsibilities}
-            handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
-            handleChangeJobResponsibilities={handleChangeJobResponsibilities}
-          /> */}
-          <Skills
-            formData={formData}
-            handleAddSkills={handleAddSkills}
-            handleDeleteSkills={handleDeleteSkills}
-            handleChangeSkills={handleChangeSkills}
-          />
-        </form>
+        <form className="resume-form">{display}</form>
         <div className="preview-wrapper"></div>
       </main>
       <Footer />
