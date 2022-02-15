@@ -251,7 +251,7 @@ function App() {
   }
   function handleAddSkills() {
     setFormData((prevFormData) => {
-      return { prevFormData, skills: [...prevFormData.skills, ''] };
+      return { ...prevFormData, skills: [...prevFormData.skills, ''] };
     });
   }
   function handleDeleteSkills() {
