@@ -19,6 +19,11 @@ function CvExperience({ experience }) {
       </div>
     );
   });
-  return <div>{experienceItem}</div>;
+  return (
+    <div className="cv-experience-wrapper">
+      <h1>Work Experience</h1>
+      {experienceItem}
+    </div>
+  );
 }
 export default CvExperience;
