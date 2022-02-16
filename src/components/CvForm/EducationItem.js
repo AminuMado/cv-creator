@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../Input/Input';
+import Input from '../Utils/Input/Input';
 
 function EducationItem(props) {
   const { item, handleChange, id } = props;

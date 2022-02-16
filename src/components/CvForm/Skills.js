@@ -1,6 +1,6 @@
 import React from 'react';
-import Task from '../Task/Task';
-import Button from '../Button/Button';
+import Task from '../Utils/Task/Task';
+import Button from '../Utils/Button/Button';
 function Skills({
   formData,
   handleAddSkills,

@@ -1,6 +1,6 @@
 import React from 'react';
 import ExperienceItem from './ExperienceItem';
-import Button from '../Button/Button';
+import Button from '../Utils/Button/Button';
 
 function Experience(props) {
   const {

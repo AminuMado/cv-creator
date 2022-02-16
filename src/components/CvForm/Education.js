@@ -1,6 +1,6 @@
 import React from 'react';
 import EducationItem from './EducationItem';
-import Button from '../Button/Button';
+import Button from '../Utils/Button/Button';
 
 function Education(props) {
   const { formData, handleChange, handleAdd, handleDelete } = props;

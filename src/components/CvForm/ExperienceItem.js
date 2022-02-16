@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../Button/Button';
-import Input from '../Input/Input';
-import Task from '../Task/Task';
+import Button from '../Utils/Button/Button';
+import Input from '../Utils/Input/Input';
+import Task from '../Utils/Task/Task';
 
 function ExperienceItem(props) {
   const {
