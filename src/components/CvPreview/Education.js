@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Education({ education }) {
+function CvEducation({ education }) {
   const educationItems = education.map((educationItem, index) => {
     return (
       <div className="education-item-wrapper" key={index}>
@@ -20,4 +20,4 @@ function Education({ education }) {
   return <div>{educationItems}</div>;
 }
 
-export default Education;
+export default CvEducation;
