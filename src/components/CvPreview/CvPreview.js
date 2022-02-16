@@ -5,6 +5,7 @@ import CvSkills from './Skills';
 import CvExperience from './Experience';
 import CvEducation from './Education';
 import CvProfile from './Profile';
+import './CvPreview.css';
 function CvPreview({ formData }) {
   return (
     <div className="cv-preview-wrapper">
