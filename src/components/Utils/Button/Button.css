@@ -1,0 +1,29 @@
+.add,
+.delete {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid;
+  border-color: #56c9aa;
+  border-radius: 2px;
+  background: transparent;
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+  outline: none;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.add:hover {
+  background-color: #35a22b;
+  /* background-color: #7af76e;
+  background-color: #007200; 
+  transform: translate(4px, -4px);
+  box-shadow: -1px 1px 0 white;  */
+}
+.delete:hover {
+  background-color: #de1313;
+}
+.add:active,
+.delete:active {
+  transform: scale(1.02);
+}
