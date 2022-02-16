@@ -17,7 +17,12 @@ function CvEducation({ education }) {
       </div>
     );
   });
-  return <div className="cv-education-wrapper">{educationItems}</div>;
+  return (
+    <div className="cv-education-wrapper">
+      <h1>Education</h1>
+      {educationItems}
+    </div>
+  );
 }
 
 export default CvEducation;
