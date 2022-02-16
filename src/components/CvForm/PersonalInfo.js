@@ -42,7 +42,7 @@ function PersonalInfo(props) {
         value={formData.personalInfo.phoneNumber}
       />
       <Input
-        placeholder=" Bond is a highly unique indivnameual. He appears to be of sound mind and strong spirit."
+        placeholder=" Bond is a highly unique indivdual. He appears to be of sound mind and strong spirit."
         handleChange={handleChange}
         name="description"
         label="Description"
