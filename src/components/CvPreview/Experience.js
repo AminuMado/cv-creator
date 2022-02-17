@@ -9,20 +9,33 @@ function CvExperience({ experience }) {
     );
     return (
       <div className="experience-item-wrapper" key={index}>
-        <h2 className="experience-name">{experienceItem.companyName}</h2>
-        <h2 className="experience-title">{experienceItem.jobTitle}</h2>
-        <h2 className="experience-location">{experienceItem.jobLocation}</h2>
-        <div className="experience-period">
-          {experienceItem.startDate} - {experienceItem.endDate}
+        <div class="experience-header">
+          <div class="company-information">
+            <div class="cv-flex-wrapper">
+              <h2 class="experience-name">{experienceItem.companyName}</h2>
+              <h4 class="experience-location">{experienceItem.jobLocation}</h4>
+            </div>
+            <h4 class="experience-title">{experienceItem.jobTitle}</h4>
+          </div>
+          <div class="company-dates">
+            <div class="experience-period">
+              {experienceItem.startDate} {` - ${experienceItem.endDate}`}
+            </div>
+          </div>
         </div>
-        <h2 className="experience-responsibilities">{jobResponsibilities}</h2>
+
+        <div className="experience-responsibilities">
+          <ul>{jobResponsibilities}</ul>
+        </div>
       </div>
     );
   });
   return (
     <div className="cv-experience-wrapper">
-      <h1>Work Experience</h1>
-      {experienceItem}
+      <div class="title-container">
+        <h2>Experience</h2>
+      </div>
+      <div class="content-container">{experienceItem}</div>
     </div>
   );
 }
