@@ -8,20 +8,15 @@ import CvProfile from './Profile';
 import './CvPreview.css';
 function CvPreview({ formData }) {
   return (
-    <div className="cv-preview-wrapper">
+    <>
       <CvHeader personalInfo={formData.personalInfo} />
-      <div className="cv-column-container">
-        <div className="cv-left-column-wrapper">
-          <CvContact personalInfo={formData.personalInfo} />
-          <CvEducation education={formData.education} />
-          <CvSkills skills={formData.skills} />
-        </div>
-        <div className="cv-right-column-wrapper">
-          <CvProfile personalInfo={formData.personalInfo} />
-          <CvExperience experience={formData.experience} />
-        </div>
+      <div className="main">
+        <CvEducation education={formData.education} />
+        <CvSkills skills={formData.skills} />
+        <CvProfile personalInfo={formData.personalInfo} />
+        <CvExperience experience={formData.experience} />
       </div>
-    </div>
+    </>
   );
 }
 
