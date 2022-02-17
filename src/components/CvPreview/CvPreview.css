@@ -1,0 +1,17 @@
+.cv-preview-wrapper {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.cv-column-container {
+  display: flex;
+}
+.cv-left-column-wrapper {
+  border-right: 1px solid;
+  height: calc(100vh - 22vh);
+  min-width: 40%;
+  padding: 5px;
+}
+
+.cv-right-column-wrapper {
+}
