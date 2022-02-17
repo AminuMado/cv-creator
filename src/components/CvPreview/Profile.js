@@ -2,8 +2,12 @@ import React from 'react';
 function CvProfile({ personalInfo }) {
   return (
     <div className="cv-profile-wrapper">
-      <h1>Profile</h1>
-      <p>{personalInfo.description}</p>
+      <div class="title-container">
+        <h2>Profile</h2>
+      </div>
+      <div class="content-container">
+        <p class="enlarge">{personalInfo.description}</p>
+      </div>
     </div>
   );
 }
