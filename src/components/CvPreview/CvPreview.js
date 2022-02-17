@@ -11,9 +11,9 @@ function CvPreview({ formData }) {
     <>
       <CvHeader personalInfo={formData.personalInfo} />
       <div className="main">
+        <CvProfile personalInfo={formData.personalInfo} />
         <CvEducation education={formData.education} />
         <CvSkills skills={formData.skills} />
-        <CvProfile personalInfo={formData.personalInfo} />
         <CvExperience experience={formData.experience} />
       </div>
     </>
