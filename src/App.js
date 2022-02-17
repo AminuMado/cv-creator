@@ -308,7 +308,9 @@ function App() {
       <main>
         <form className="resume-form">{display}</form>
         <div className="preview-wrapper">
-          <CvPreview formData={formData} />
+          <div className="inner">
+            <CvPreview formData={formData} />
+          </div>
         </div>
       </main>
       <Footer />
