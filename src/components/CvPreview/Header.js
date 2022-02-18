@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function CvHeader({ personalInfo }) {
   const { fullName, title, email, address, phoneNumber } = personalInfo;
 
@@ -13,10 +16,19 @@ function CvHeader({ personalInfo }) {
         <div class="header-content-2">
           <div class="cv-contact-wrapper">
             <h3>
-              <a href="#">{email}</a>
+              <a href="#">
+                <FontAwesomeIcon className="email-icon" icon={faEnvelope} />
+                {email}
+              </a>
             </h3>
-            <h3>{address}</h3>
-            <h3>{phoneNumber}</h3>
+            <h3>
+              <FontAwesomeIcon className="location-icon" icon={faLocationDot} />
+              {address}
+            </h3>
+            <h3>
+              <FontAwesomeIcon className="phone-icon" icon={faPhone} />
+              {phoneNumber}
+            </h3>
           </div>
         </div>
       </div>
