@@ -29,7 +29,6 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-s
 - Used **ES6 Modules** for more modular code.
 - Used CSS3 **grid** and **flex** to create layout.
 - Used **Git** and **GitHub** for project management.
-
 - Used **webpack**
 
 ## Summary
