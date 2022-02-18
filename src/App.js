@@ -14,8 +14,8 @@ function App() {
   const [navItems, setNavItems] = React.useState([
     { name: 'Profile', id: nanoid() },
     { name: 'Education', id: nanoid() },
-    { name: 'Experience', id: nanoid() },
     { name: 'Skills', id: nanoid() },
+    { name: 'Experience', id: nanoid() },
   ]);
   const [formData, setFormData] = React.useState({
     personalInfo: {
