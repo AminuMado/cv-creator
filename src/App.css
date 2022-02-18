@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,500;1,600&display=swap');
 html,
 body,
 #root {
@@ -8,6 +9,7 @@ body,
   font-size: 0.95em;
   background: #14171d;
   color: #c0c5ce;
+  font-family: 'Roboto Serif', sans-serif;
 }
 .flex-wrapper {
   display: -webkit-box;
@@ -101,5 +103,4 @@ form {
   overflow-y: auto;
   padding-bottom: 25px;
   text-align: center;
-  background-color: aliceblue;
 }
