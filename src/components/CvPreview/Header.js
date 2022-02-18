@@ -8,13 +8,13 @@ function CvHeader({ personalInfo }) {
 
   return (
     <div className="cv-header-wrapper">
-      <div class="cv-flex-wrapper-header">
-        <div class="header-content-1">
+      <div className="cv-flex-wrapper-header">
+        <div className="header-content-1">
           <h1>{fullName}</h1>
           <p>{title}</p>
         </div>
-        <div class="header-content-2">
-          <div class="cv-contact-wrapper">
+        <div className="header-content-2">
+          <div className="cv-contact-wrapper">
             <h3>
               <a href="#">
                 <FontAwesomeIcon className="email-icon" icon={faEnvelope} />
