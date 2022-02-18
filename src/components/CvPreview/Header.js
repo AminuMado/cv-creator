@@ -5,7 +5,7 @@ function CvHeader({ personalInfo }) {
 
   return (
     <div className="cv-header-wrapper">
-      <div class="cv-flex-wrapper">
+      <div class="cv-flex-wrapper-header">
         <div class="header-content-1">
           <h1>{fullName}</h1>
           <p>{title}</p>
