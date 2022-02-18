@@ -191,7 +191,7 @@ p.enlarge {
     display: none;
   }
   .preview-wrapper {
-    display: block;
+    display: none;
   }
   form {
     width: 100%;
@@ -199,7 +199,7 @@ p.enlarge {
     padding: 25px 0 0 0;
     overflow-y: auto;
     border: none;
-    display: none;
+    display: block;
   }
 
   main {
@@ -218,7 +218,7 @@ p.enlarge {
     display: none;
   }
   .preview-wrapper {
-    display: block;
+    display: none;
   }
   form {
     width: 100%;
@@ -226,7 +226,7 @@ p.enlarge {
     padding: 25px 0 0 0;
     overflow-y: auto;
     border: none;
-    display: none;
+    display: block;
   }
 
   main {
@@ -261,7 +261,7 @@ p.enlarge {
     display: none;
   }
   .preview-wrapper {
-    display: block;
+    display: none;
   }
   form {
     width: 100%;
@@ -269,7 +269,7 @@ p.enlarge {
     padding: 25px 0 0 0;
     overflow-y: auto;
     border: none;
-    display: none;
+    display: block;
   }
 
   main {
