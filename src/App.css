@@ -41,6 +41,7 @@ body,
   align-items: center;
   background: #14171d;
   border-bottom: 1px solid #202530;
+  font-size: 50px;
 }
 aside {
   position: fixed;
