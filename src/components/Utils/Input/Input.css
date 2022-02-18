@@ -13,7 +13,7 @@
   font-size: 0.9em;
   border: none;
   border-bottom: 2px solid #202530;
-  color: #4ddbe0;
+  color: #0087ca;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   background: transparent;
@@ -23,10 +23,10 @@
 }
 .form-input > input:focus {
   border-bottom: 2px solid rgb(133, 102, 102);
-  color: black;
+  color: #4ddbe0;
 }
 .form-input > input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #5082dd;
-  opacity: 1; /* Firefox */
+  color: #acacac;
+  opacity: 0.5; /* Firefox */
 }
