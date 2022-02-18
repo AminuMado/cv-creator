@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CvExperience({ experience }) {
+function CvExperience(props) {
+  const { experience } = props;
   const experienceItem = experience.map((experienceItem, index) => {
     const jobResponsibilities = experienceItem.jobResponsibilities.map(
       (jobResponsibility, index) => {

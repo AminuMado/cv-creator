@@ -1,5 +1,6 @@
 import React from 'react';
-function CvProfile({ personalInfo }) {
+function CvProfile(props) {
+  const { personalInfo } = props;
   return (
     <div className="cv-profile-wrapper">
       <div className="title-container">

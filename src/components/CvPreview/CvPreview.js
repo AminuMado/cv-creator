@@ -6,7 +6,8 @@ import CvExperience from './Experience';
 import CvEducation from './Education';
 import CvProfile from './Profile';
 import './CvPreview.css';
-function CvPreview({ formData }) {
+function CvPreview(props) {
+  const { formData } = props;
   return (
     <>
       <CvHeader personalInfo={formData.personalInfo} />

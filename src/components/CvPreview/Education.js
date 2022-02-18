@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CvEducation({ education }) {
+function CvEducation(props) {
+  const { education } = props;
   const educationItems = education.map((educationItem, index) => {
     return (
       <div className="education-item-wrapper" key={index}>

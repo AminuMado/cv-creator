@@ -78,7 +78,6 @@ function App() {
         },
       };
     });
-    console.log(formData);
   }
   function setActive(id) {
     setActiveNavItem(id);
@@ -98,7 +97,6 @@ function App() {
       });
       return { ...prevFormData, education: [...newEducation] };
     });
-    console.log(formData.education);
   }
   function handleAddEducation(event) {
     //This function basically adds a new empty object in the formdata.education array
@@ -153,7 +151,6 @@ function App() {
       });
       return { ...prevFormData, experience: [...newExperience] };
     });
-    console.log(formData.experience);
   }
   function handleAddExperience(event) {
     if (formData.experience.length > 3) {
@@ -207,7 +204,6 @@ function App() {
       );
       return { ...prevFormData, experience: [...newExperienceData] };
     });
-    console.log(formData);
   }
   function handleDeleteJobResponsibilities(event, id) {
     //This also checks the array id first then creates a new array with the last element sliced off
@@ -224,7 +220,6 @@ function App() {
       );
       return { ...prevFormData, experience: [...newExperienceData] };
     });
-    console.log(formData);
   }
   function handleChangeJobResponsibilities(event, id, index) {
     setFormData((prevFormData) => {

@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-function CvHeader({ personalInfo }) {
+function CvHeader(props) {
+  const { personalInfo } = props;
   const { fullName, title, email, address, phoneNumber } = personalInfo;
 
   return (

@@ -1,12 +1,9 @@
 import React from 'react';
 import Task from '../Utils/Task/Task';
 import Button from '../Utils/Button/Button';
-function Skills({
-  formData,
-  handleAddSkills,
-  handleDeleteSkills,
-  handleChangeSkills,
-}) {
+function Skills(props) {
+  const { formData, handleAddSkills, handleDeleteSkills, handleChangeSkills } =
+    props;
   const skills = formData.skills.map((skill, index) => (
     <Task
       key={index}

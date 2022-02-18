@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CvContact({ personalInfo }) {
+function CvContact(props) {
+  const { personalInfo } = props;
   const { address, phoneNumber, email } = personalInfo;
 
   return (
