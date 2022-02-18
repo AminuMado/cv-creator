@@ -44,7 +44,7 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-s
 
 ### Credit
 
-This layout and design was inspired by [Resumake}(https://resumake.io)
+This layout and design was inspired by [Resumake](https://resumake.io)
 
 ## Author
 
