@@ -82,11 +82,12 @@
   margin: 0;
   padding: 0;
 }
+
 .content-container {
   width: 80.2%;
   text-align: left;
+  overflow-wrap: anywhere;
 }
-
 p.enlarge {
   font-size: 144%;
   padding-right: 2.5em;
