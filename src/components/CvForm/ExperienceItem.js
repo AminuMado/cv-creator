@@ -35,19 +35,19 @@ function ExperienceItem(props) {
         handleChange={handleChange}
       />
       <Input
-        name="jobTitle"
-        id={id}
-        label="Job Title"
-        placeholder="Software Engineer"
-        value={item.jobTitle}
-        handleChange={handleChange}
-      />
-      <Input
         name="jobLocation"
         id={id}
         label="Job Location"
         placeholder="Mountain View, CA"
         value={item.jobLocation}
+        handleChange={handleChange}
+      />
+      <Input
+        name="jobTitle"
+        id={id}
+        label="Job Title"
+        placeholder="Software Engineer"
+        value={item.jobTitle}
         handleChange={handleChange}
       />
       <Input
