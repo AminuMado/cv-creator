@@ -1,6 +1,6 @@
 # Cv Creator
 
-Project to create **Cv-Creator** using Vanilla JS, CSS and HTML
+Project to create **Cv-Creator** using React
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/cv-application).
 
@@ -45,7 +45,7 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/full-s
 
 ### Credit
 
-This layout and design was inspired by [Resumake]🔗(https://resumake.io)
+This layout and design was inspired by [Resumake}(https://resumake.io)
 
 ## Author
 
