@@ -16,9 +16,9 @@ function CvEducation({ education }) {
           </div>
         </div>
         <div class="cv-flex-wrapper">
-          <h2 class="education-degree">{educationItem.degree}</h2>
+          <h2 class="education-degree">{educationItem.degree} </h2>
           <h2 class="education-major">{educationItem.major}</h2>
-          <h4 class="education-gpa">{educationItem.gpa}GPA</h4>
+          <h4 class="education-gpa">{educationItem.gpa} GPA</h4>
         </div>
       </div>
     );
