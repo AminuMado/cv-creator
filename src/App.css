@@ -110,11 +110,9 @@ form {
   display: none;
 }
 .container {
-  position: relative;
   transform: translate(0%, 40%);
 }
 .steps {
-  position: relative;
   display: flex;
   justify-content: space-between;
   width: 200px;
@@ -123,29 +121,10 @@ form {
   width: 15px;
   height: 15px;
   background: #fff;
-  /* border: 2px solid #acaca6; */
   border-radius: 50%;
   transition: all 1s;
 }
-.step.selected {
-  border: 2px solid #4b81bd;
-}
+
 .step.completed {
-  border: 2px solid #4b81bd;
-  background: #4b81bd;
-}
-.progress {
-  position: absolute;
-  width: 100%;
-  height: 48%;
-  border-bottom: 2px solid #acaca6;
-  z-index: 0;
-}
-.percent {
-  /* position: absolute; */
-  width: 0;
-  height: 100%;
-  border-bottom: 2px solid #4b81bd;
-  z-index: 1;
-  transition: width 1s;
+  background: #0087ca;
 }

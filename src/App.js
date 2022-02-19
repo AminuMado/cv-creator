@@ -299,12 +299,10 @@ function App() {
   function handlePrev(event) {
     if (count == 0) return;
     setCount((prevCount) => prevCount - 1);
-    console.log(count);
   }
   function handleNext(event) {
     if (count == 3) return;
     setCount((prevCount) => prevCount + 1);
-    console.log(count);
   }
   return (
     <div className="flex-wrapper">
@@ -327,14 +325,11 @@ function App() {
             classification="Add"
           />
           <div className="container">
-            <div className="progress">
-              <div className="percent"></div>
-            </div>
             <div className="steps">
-              <div className="step" id="0"></div>
-              <div className="step" id="1"></div>
-              <div className="step" id="2"></div>
-              <div className="step" id="3"></div>
+              <div className={count == 0 ? 'step completed' : 'step'}></div>
+              <div className={count == 1 ? 'step completed' : 'step'}></div>
+              <div className={count == 2 ? 'step completed' : 'step'}></div>
+              <div className={count == 3 ? 'step completed' : 'step'}></div>
             </div>
           </div>
           <Button
