@@ -308,13 +308,24 @@ function App() {
             <CvPreview formData={formData} />
           </div>
         </div>
-        <div className="prev-next-button container">
+        <div className="prev-next-button-container">
           <Button
             name="← Prev"
             id="prev"
             handleClick={(e) => console.log(e.target)}
             classification="Add"
           />
+          <div className="container">
+            <div className="progress">
+              <div className="percent"></div>
+            </div>
+            <div className="steps">
+              <div className="step" id="0"></div>
+              <div className="step" id="1"></div>
+              <div className="step" id="2"></div>
+              <div className="step" id="3"></div>
+            </div>
+          </div>
           <Button
             name="Next →"
             id="next"
