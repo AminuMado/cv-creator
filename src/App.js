@@ -82,7 +82,7 @@ function App() {
     });
   }
   function setActive(id) {
-    setMobile(false);
+    setMobile(false); // This is used to have the ability to swap forms when mobile is false
     setActiveNavItem(id);
   }
 
