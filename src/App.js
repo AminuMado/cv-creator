@@ -381,7 +381,13 @@ function App() {
             <CvPreview formData={formData} />
           </div>
         </div>
-        <div className="prev-next-button-container">
+        <div
+          className={
+            !show
+              ? 'prev-next-button-container'
+              : 'prev-next-button-container hide'
+          }
+        >
           <Button
             name="← Prev"
             id="prev"
