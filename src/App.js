@@ -64,6 +64,7 @@ function App() {
   ));
   const [count, setCount] = React.useState(0);
   const [mobile, setMobile] = React.useState(false);
+  const [show, setShow] = React.useState(false);
   // Personal Info handlers
 
   function handleChangePersonalInfo(event) {
@@ -353,6 +354,10 @@ function App() {
     setCount((prevCount) => prevCount + 1);
     console.log(mobile);
   }
+  // preview button
+  function handlePreview(e) {
+    setShow((prevShow) => !prevShow);
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -360,8 +365,18 @@ function App() {
         <nav>{navList}</nav>
       </aside>
       <main>
-        <form className="resume-form">{display}</form>
-        <div className="preview-wrapper">
+        <div className="preview-button-container">
+          <Button
+            name="Preview"
+            id="preview"
+            handleClick={(e) => handlePreview(e)}
+            classification="Add"
+          />
+        </div>
+        <form className={!show ? 'resume-form hide' : 'resume-form '}>
+          {display}
+        </form>
+        <div className={show ? 'preview-wrapper' : 'preview-wrapper show'}>
           <div className="inner">
             <CvPreview formData={formData} />
           </div>
