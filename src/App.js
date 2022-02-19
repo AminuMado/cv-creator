@@ -373,10 +373,10 @@ function App() {
             classification="Add"
           />
         </div>
-        <form className={!show ? 'resume-form hide' : 'resume-form '}>
+        <form className={!show ? 'resume-form ' : 'resume-form hide'}>
           {display}
         </form>
-        <div className={show ? 'preview-wrapper' : 'preview-wrapper show'}>
+        <div className={show ? 'preview-wrapper show' : 'preview-wrapper'}>
           <div className="inner">
             <CvPreview formData={formData} />
           </div>
