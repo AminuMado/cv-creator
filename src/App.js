@@ -62,7 +62,7 @@ function App() {
       setActive={setActive}
     />
   ));
-
+  const [count, setCount] = React.useState(0);
   // Personal Info handlers
 
   function handleChangePersonalInfo(event) {
@@ -295,6 +295,17 @@ function App() {
       />
     );
   }
+  // Prev and Next Button
+  function handlePrev(event) {
+    if (count == 0) return;
+    setCount((prevCount) => prevCount - 1);
+    console.log(count);
+  }
+  function handleNext(event) {
+    if (count == 3) return;
+    setCount((prevCount) => prevCount + 1);
+    console.log(count);
+  }
   return (
     <div className="flex-wrapper">
       <header className="header">My Cv Creator</header>
@@ -312,7 +323,7 @@ function App() {
           <Button
             name="← Prev"
             id="prev"
-            handleClick={(e) => console.log(e.target)}
+            handleClick={(e) => handlePrev(e)}
             classification="Add"
           />
           <div className="container">
@@ -329,7 +340,7 @@ function App() {
           <Button
             name="Next →"
             id="next"
-            handleClick={(e) => console.log(e.target)}
+            handleClick={(e) => handleNext(e)}
             classification="Add"
           />
         </div>
