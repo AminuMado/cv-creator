@@ -7,6 +7,7 @@ import Education from './components/CvForm/Education';
 import Experience from './components/CvForm/Experience';
 import Skills from './components/CvForm/Skills';
 import CvPreview from './components/CvPreview/CvPreview';
+import Button from './components/Utils/Button/Button';
 
 import { nanoid } from 'nanoid';
 
@@ -306,6 +307,20 @@ function App() {
           <div className="inner">
             <CvPreview formData={formData} />
           </div>
+        </div>
+        <div className="prev-next-button container">
+          <Button
+            name="← Prev"
+            id="prev"
+            handleClick={(e) => console.log(e.target)}
+            classification="Add"
+          />
+          <Button
+            name="Next →"
+            id="next"
+            handleClick={(e) => console.log(e.target)}
+            classification="Add"
+          />
         </div>
       </main>
       <Footer />
