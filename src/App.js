@@ -63,6 +63,7 @@ function App() {
     />
   ));
   const [count, setCount] = React.useState(0);
+  const [mobile, setMobile] = React.useState(false);
   // Personal Info handlers
 
   function handleChangePersonalInfo(event) {
@@ -81,6 +82,7 @@ function App() {
     });
   }
   function setActive(id) {
+    setMobile(false);
     setActiveNavItem(id);
   }
 
@@ -257,52 +259,99 @@ function App() {
     });
   }
   let display;
-  if (activeNavItem === 'Profile') {
-    display = (
-      <PersonalInfo
-        formData={formData}
-        handleChange={handleChangePersonalInfo}
-      />
-    );
-  } else if (activeNavItem === 'Education') {
-    display = (
-      <Education
-        formData={formData}
-        handleChange={handleChangeEducation}
-        handleAdd={handleAddEducation}
-        handleDelete={handleDeleteEducation}
-      />
-    );
-  } else if (activeNavItem === 'Experience') {
-    display = (
-      <Experience
-        formData={formData}
-        handleChange={handleChangeExperience}
-        handleAdd={handleAddExperience}
-        handleDelete={handleDeleteExperience}
-        handleAddJobResponsibilities={handleAddJobResponsibilities}
-        handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
-        handleChangeJobResponsibilities={handleChangeJobResponsibilities}
-      />
-    );
-  } else if (activeNavItem === 'Skills') {
-    display = (
-      <Skills
-        formData={formData}
-        handleAddSkills={handleAddSkills}
-        handleDeleteSkills={handleDeleteSkills}
-        handleChangeSkills={handleChangeSkills}
-      />
-    );
+  // The logic below allows us to change activeNav item between moblie view and desktop view
+  if (mobile) {
+    if (count == 0) {
+      display = (
+        <PersonalInfo
+          formData={formData}
+          handleChange={handleChangePersonalInfo}
+        />
+      );
+    } else if (count === 1) {
+      display = (
+        <Education
+          formData={formData}
+          handleChange={handleChangeEducation}
+          handleAdd={handleAddEducation}
+          handleDelete={handleDeleteEducation}
+        />
+      );
+    } else if (count === 2) {
+      display = (
+        <Experience
+          formData={formData}
+          handleChange={handleChangeExperience}
+          handleAdd={handleAddExperience}
+          handleDelete={handleDeleteExperience}
+          handleAddJobResponsibilities={handleAddJobResponsibilities}
+          handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
+          handleChangeJobResponsibilities={handleChangeJobResponsibilities}
+        />
+      );
+    } else if (count === 3) {
+      display = (
+        <Skills
+          formData={formData}
+          handleAddSkills={handleAddSkills}
+          handleDeleteSkills={handleDeleteSkills}
+          handleChangeSkills={handleChangeSkills}
+        />
+      );
+    }
+  } else {
+    if (activeNavItem === 'Profile') {
+      display = (
+        <PersonalInfo
+          formData={formData}
+          handleChange={handleChangePersonalInfo}
+        />
+      );
+    } else if (activeNavItem === 'Education') {
+      display = (
+        <Education
+          formData={formData}
+          handleChange={handleChangeEducation}
+          handleAdd={handleAddEducation}
+          handleDelete={handleDeleteEducation}
+        />
+      );
+    } else if (activeNavItem === 'Experience') {
+      display = (
+        <Experience
+          formData={formData}
+          handleChange={handleChangeExperience}
+          handleAdd={handleAddExperience}
+          handleDelete={handleDeleteExperience}
+          handleAddJobResponsibilities={handleAddJobResponsibilities}
+          handleDeleteJobResponsibilities={handleDeleteJobResponsibilities}
+          handleChangeJobResponsibilities={handleChangeJobResponsibilities}
+        />
+      );
+    } else if (activeNavItem === 'Skills') {
+      display = (
+        <Skills
+          formData={formData}
+          handleAddSkills={handleAddSkills}
+          handleDeleteSkills={handleDeleteSkills}
+          handleChangeSkills={handleChangeSkills}
+        />
+      );
+    }
   }
+
   // Prev and Next Button
   function handlePrev(event) {
+    setMobile((prevMobile) => true);
     if (count == 0) return;
     setCount((prevCount) => prevCount - 1);
+    console.log(mobile);
   }
   function handleNext(event) {
+    setMobile(true);
     if (count == 3) return;
     setCount((prevCount) => prevCount + 1);
+    console.log(mobile);
   }
   return (
     <div className="flex-wrapper">
