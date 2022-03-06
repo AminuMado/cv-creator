@@ -346,13 +346,11 @@ function App() {
     setMobile((prevMobile) => true);
     if (count == 0) return;
     setCount((prevCount) => prevCount - 1);
-    console.log(mobile);
   }
   function handleNext(event) {
     setMobile(true);
     if (count == 3) return;
     setCount((prevCount) => prevCount + 1);
-    console.log(mobile);
   }
   // preview button
   function handlePreview(e) {
